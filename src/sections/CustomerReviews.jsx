@@ -2,17 +2,17 @@ import {reviews} from '../constants'
 import ReviewCard from '../components/ReviewCard'
 const CustomerReviews = () => {
   return (
-    <section className="max-container flex items-center justify-center flex-col">
-      <h3 className="text-4xl font-palanquin leading-tight font-bold ">
+    <section className="max-container">
+      <h3 className="text-4xl font-palanquin leading-tight font-bold text-center">
         What Our 
         <span className="text-coral-red" > Customers </span>
          Say ?
       </h3>
-      <p className="text-slate-gray font-montserrat mt-6 text-lg text-center max-w-lg">
+      <p className="text-center info-text max-w-lg mt-4 m-auto">
       Hear genuine stories from our satisfied customers about their exceptional experiences with us.
       </p>
-      <div className="mt-20 flex flex-1 justify-evenly items-center max-lg:flex-col gap-14">
-        {reviews.map((review)=>(<ReviewCard imgURL={review.imgURL}/>))}
+      <div className="mt-24 flex flex-1 justify-evenly items-center max-lg:flex-col gap-14 text-center">
+        {reviews.map((review)=>(<ReviewCard key={review.customerName} {...review}/>))}
       </div>
     </section>
   )

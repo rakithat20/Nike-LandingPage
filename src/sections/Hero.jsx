@@ -4,13 +4,16 @@ import { bigShoe1 } from "../assets/images";
 import Button from "../components/Button";
 import ShoeCard from "../components/ShoeCard";
 import { shoes, statistics } from "../constants";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [bigShoeImg,setBigShoe]=useState(bigShoe1)
   return (
-    <section
+    <motion.section
       id="home"
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
     >
       <div
         className="relative xl:w-2/5 flex flex-col justify-center items-start w-full xl:px-10 pt-28"
@@ -67,7 +70,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

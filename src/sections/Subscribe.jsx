@@ -1,7 +1,8 @@
 import Button from "../components/Button"
+import { motion } from "framer-motion"
 const Subscribe = () => {
   return (
-    <section id="contact-us" className="max-container flex justify-between items-center max-lg:flex-col gap-10">
+    <motion.section id="contact-us" className="max-container flex justify-between items-center max-lg:flex-col gap-10" initial={{opacity:0}} whileInView={{opacity:1}}>
       <h2 className="text-4xl font-bold leading-normal font-palanquin max-w-md ">Sign Up for
         <span className="text-coral-red"> Updates </span>
         & Newsletter
@@ -10,7 +11,7 @@ const Subscribe = () => {
         <input type="text" placeholder="Subscribe@nike.com" className="input w1"/>
         <Button label="Sign Up" fullWidth ="w-full lg:w-1/4"/>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

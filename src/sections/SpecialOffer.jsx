@@ -1,9 +1,10 @@
 import Button from '../components/Button'
 import {offer} from '../assets/images'
 import {arrowRight} from '../assets/icons'
+import {motion} from 'framer-motion'
 const SpecialOffer = () => {
   return (
-    <section className="flex justify-between items-center max-xl:flex-col-reverse gap-10 max-container">
+    <motion.section className="flex justify-between items-center max-xl:flex-col-reverse gap-10 max-container" initial={{opacity:0}} whileInView={{opacity:1}}>
       <div className="flex-1">
         <img src={offer} width={773} height={687} className="object-contain w-full" />
       </div>
@@ -28,7 +29,7 @@ const SpecialOffer = () => {
         <Button label="Learn More" backgroundColor="bg-white" borderColor="border-slate-gray" textColor="text-slate-gray"/>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

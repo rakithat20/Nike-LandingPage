@@ -1,7 +1,7 @@
 import { star } from "../assets/icons"
 const PopularProductCard = ({imgURL,name,price}) => {
   return (
-    <div className="flex flex-1 w-full max-sm:w-full flex-col">
+    <div className="flex flex-1 w-full max-sm:w-full flex-col hover:scale-105 transition">
         <img src={imgURL} alt={name} className="w-[280px] h-[280px]"/>
         <div className="flex justify-start gap-2.5 mt-8">
             <img src={star} alt="ratings star" />
